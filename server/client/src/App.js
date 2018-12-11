@@ -15,10 +15,10 @@ class App extends Component {
             className="App-link"
             href="https://reactjs.org"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             Learn React
           </a>
+          <a href="/auth/google">Sign in with Google</a>
         </header>
       </div>
     );
