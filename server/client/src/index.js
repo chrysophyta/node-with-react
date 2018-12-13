@@ -1,5 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
 
-ReactDOM.render(<App />, document.querySelector('#root'));
+const store = createStore(() => [], {}, applyMiddleware());
+// second argument for ssr;
+
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.querySelector('#root')
+);
